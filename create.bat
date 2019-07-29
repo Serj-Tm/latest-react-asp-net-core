@@ -1,5 +1,5 @@
-set name=my-app
-set reactAppName=%name%
+set name=My.App
+set reactAppName=my-app
 set rname=r-%name%(tmp)
 
 cmd /c "npx create-react-app %reactAppName% --typescript"
