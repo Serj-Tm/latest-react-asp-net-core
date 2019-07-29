@@ -17,8 +17,8 @@ copy /Y %rname%\README.md %name%\ClientApp\
 copy /Y %rname%\public\index.html %name%\ClientApp\public\
 copy /Y %rname%\public\manifest.json %name%\ClientApp\public\
 
-rem copy /Y %rname%\src\serviceWorker.ts %name%\ClientApp\src\
-rem del %name%\ClientApp\src\registerServiceWorker.js
+copy /Y %rname%\src\serviceWorker.ts %name%\ClientApp\src\serviceWorker.js
+del %name%\ClientApp\src\registerServiceWorker.js
 ren %name%\ClientApp\src\components\Home.js Home.tsx
 ren %name%\ClientApp\src\components\NavMenu.js NavMenu.tsx
 
