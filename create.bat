@@ -17,8 +17,8 @@ copy /Y %rname%\README.md %name%\ClientApp\
 copy /Y %rname%\public\index.html %name%\ClientApp\public\
 copy /Y %rname%\public\manifest.json %name%\ClientApp\public\
 
-copy /Y %rname%\src\serviceWorker.ts %name%\ClientApp\src\
-del %name%\ClientApp\src\registerServiceWorker.js
+rem copy /Y %rname%\src\serviceWorker.ts %name%\ClientApp\src\
+rem del %name%\ClientApp\src\registerServiceWorker.js
 ren %name%\ClientApp\src\components\Home.js Home.tsx
 ren %name%\ClientApp\src\components\NavMenu.js NavMenu.tsx
 
@@ -37,4 +37,4 @@ echo "// Learn more about service workers: http://bit.ly/CRA-PWA"
 echo "serviceWorker.unregister();"
 
 echo "2. ClientApp\components\NavMenu.tsx: Component -> Component<{}, { collapsed: boolean }>, constructor(props) -> constructor(props:any)"
-echo "3. ClientApp\public\index.html: add  <base href="%PUBLIC_URL%/" />"
+echo "3. ClientApp\public\index.html: add  <base href='%PUBLIC_URL%/' />"
