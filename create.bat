@@ -20,7 +20,9 @@ copy /Y %rname%\public\manifest.json %name%\ClientApp\public\
 ren %name%\ClientApp\src\components\Home.js Home.tsx
 ren %name%\ClientApp\src\components\NavMenu.js NavMenu.tsx
 
-cp .editorconfig %name%\
+ts-node transform.ts %name%\ClientApp\src\index.js %name%\ClientApp\src\index.js
+
+cp template\.editorconfig
 
 pushd %name%\ClientApp
 cmd /c "npm install"
