@@ -20,6 +20,9 @@ copy /Y %rname%\public\manifest.json %name%\ClientApp\public\
 ren %name%\ClientApp\src\components\Home.js Home.tsx
 ren %name%\ClientApp\src\components\NavMenu.js NavMenu.tsx
 
+copy /Y %rname%\src\serviceWorker.ts %name%\ClientApp\src\
+del %name%\ClientApp\src\registerServiceWorker.js
+
 ts-node transform.ts %name%\ClientApp\src\index.js %name%\ClientApp\src\index.js
 
 cp template\.editorconfig
