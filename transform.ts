@@ -52,7 +52,7 @@ ts.addSyntheticLeadingComment(
   
 
 
-const statements = sourceFile.statements.slice(0, lastImportIndex)
+const statements = sourceFile.statements.slice(0, lastImportIndex - 1)
   .concat(newImport)
   .concat(sourceFile.statements.slice(lastImportIndex)
     .filter(statement => !(statement.kind == ts.SyntaxKind.ExpressionStatement 
