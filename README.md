@@ -23,4 +23,13 @@
         npm i victory @types/victory
         npm i @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
 
+ts-optchain:
 
+        // tsconfig.json
+        {
+            "compilerOptions": {
+                "plugins": [
+                    { "transform": "ts-optchain/transform" },
+                ]
+            },
+        }
