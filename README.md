@@ -12,7 +12,7 @@
         Install-Package NSwag.AspNetCore
 
         npm i ts-optchain
-        npm i axios reactstrap @types/reactstrap
+        npm i axios
         npm i react-table @types/react-table
 
         NavMenu.tsx: <Container> => <Container fluid>
