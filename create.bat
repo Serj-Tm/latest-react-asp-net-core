@@ -1,5 +1,5 @@
-set name=My.App
-set reactAppName=my-app
+set name=%1
+set reactAppName=%2
 set rname=r-%name%(tmp)
 
 cmd /c "npx create-react-app %reactAppName% --typescript"
@@ -23,9 +23,9 @@ ren %name%\ClientApp\src\components\NavMenu.js NavMenu.tsx
 copy /Y %rname%\src\serviceWorker.ts %name%\ClientApp\src\
 del %name%\ClientApp\src\registerServiceWorker.js
 
-ts-node transform.ts %name%\ClientApp\src\index.js %name%\ClientApp\src\index.js
+cmd /c "ts-node transform.ts %name%\ClientApp\src\index.js %name%\ClientApp\src\index.js"
 
-cp template\.editorconfig
+copy /Y template\.editorconfig %name%
 
 pushd %name%\ClientApp
 cmd /c "npm install"
@@ -35,11 +35,5 @@ cmd /c "npm install --save typescript @types/node @types/react @types/react-dom 
 cmd /c "npm install --save @types/reactstrap @types/react-router-dom"
 popd
 
-echo "1. ClientApp\src\index.js: replace serviceWorker"
-echo "import * as serviceWorker from './serviceWorker';"
-echo "// If you want your app to work offline and load faster, you can change unregister() to register() below. Note this comes with some pitfalls."
-echo "// Learn more about service workers: http://bit.ly/CRA-PWA"
-echo "serviceWorker.unregister();"
-
-echo "2. ClientApp\components\NavMenu.tsx: Component -> Component<{}, { collapsed: boolean }>, constructor(props) -> constructor(props:any)"
-echo "3. ClientApp\public\index.html: add  <base href='%PUBLIC_URL%/' />"
+echo "1. ClientApp\components\NavMenu.tsx: Component -> Component<{}, { collapsed: boolean }>, constructor(props) -> constructor(props:any)"
+echo "2. ClientApp\public\index.html: add  <base href='%PUBLIC_URL%/' />"
