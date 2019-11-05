@@ -1,9 +1,13 @@
 # Create asp.net core project with latest create-react-app
 
-1. create.bat: rename my-app
-2. run create.bat
-3. ClientApp\components\NavMenu.tsx: Component => Component<{}, { collapsed: boolean }>, constructor(props) -> constructor(props:any)
-4. ClientApp\public\index.html: add &lt;base href='%PUBLIC_URL%/' /&gt;
+Usage:
+
+1. run: create.bat <Csharp.Project.Name> <react-app-name>
+2. change manually:
+  1. ClientApp\components\NavMenu.tsx: Component => Component<{}, { collapsed: boolean }>, constructor(props) -> constructor(props:any)
+  2. ClientApp\public\index.html: add &lt;base href='%PUBLIC_URL%/' /&gt;
+
+Additional actions:
 
         Install-Package NitroBolt.Functional
         Install-Package NitroBolt.Immutable
