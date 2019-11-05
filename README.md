@@ -4,8 +4,8 @@ Usage:
 
 1. run: create.bat <Csharp.Project.Name> <react-app-name>
 2. change manually:
-  1. ClientApp\components\NavMenu.tsx: Component => Component<{}, { collapsed: boolean }>, constructor(props) -> constructor(props:any)
-  2. ClientApp\public\index.html: add &lt;base href='%PUBLIC_URL%/' /&gt;
+    1. ClientApp\components\NavMenu.tsx: Component => Component<{}, { collapsed: boolean }>, constructor(props) -> constructor(props:any)
+    2. ClientApp\public\index.html: add &lt;base href='%PUBLIC_URL%/' /&gt;
 
 Additional actions:
 
