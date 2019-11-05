@@ -27,7 +27,7 @@ Additional actions:
         npm i victory @types/victory
         npm i @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
 
-ts-optchain:
+[ts-optchain][1]:
 
         // tsconfig.json
         {
@@ -37,3 +37,5 @@ ts-optchain:
                 ]
             },
         }
+
+[1]: https://github.com/rimeto/ts-optchain
