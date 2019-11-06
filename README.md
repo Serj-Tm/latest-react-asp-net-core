@@ -27,7 +27,31 @@ Additional actions:
         npm i victory @types/victory
         npm i @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
 
-[ts-optchain][1]:
+[NSwag][1]:
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddDbContext<TodoContext>(opt =>
+                opt.UseInMemoryDatabase("TodoList"));
+            services.AddMvc();
+
+            // Register the Swagger services
+            services.AddSwaggerDocument();
+        }
+        public void Configure(IApplicationBuilder app)
+        {
+            app.UseStaticFiles();
+
+            // Register the Swagger generator and the Swagger UI middlewares
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
+
+            app.UseMvc();
+        }
+
+
+
+[ts-optchain][2]:
 
         // tsconfig.json
         {
@@ -38,4 +62,5 @@ Additional actions:
             },
         }
 
-[1]: https://github.com/rimeto/ts-optchain
+[1]: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.0&tabs=visual-studio
+[2]: https://github.com/rimeto/ts-optchain
