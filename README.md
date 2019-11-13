@@ -10,6 +10,7 @@ Usage:
 Additional actions:
 
         Install-Package NitroBolt.Functional
+        Install-Package System.Collections.Immutable
         Install-Package NitroBolt.Immutable
         Install-Package Serilog
         Install-Package Serilog.Sinks.File
