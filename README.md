@@ -15,6 +15,8 @@ Additional actions:
         Install-Package Serilog
         Install-Package Serilog.Sinks.File
         Install-Package NSwag.AspNetCore
+        
+        Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 
         npm i ts-optchain
         npm i axios
@@ -50,7 +52,10 @@ Additional actions:
             app.UseMvc();
         }
 
-
+[Newtonsoft.Json with Asp.Net core 3][3]:
+    
+        services.AddControllers()
+            .AddNewtonsoftJson();
 
 [ts-optchain][2]:
 
@@ -65,3 +70,4 @@ Additional actions:
 
 [1]: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.0&tabs=visual-studio
 [2]: https://github.com/rimeto/ts-optchain
+[3]: https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-3.0&tabs=visual-studio#jsonnet-support
