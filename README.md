@@ -62,9 +62,11 @@ Additional actions:
         // tsconfig.json
         {
             "compilerOptions": {
+                //...
                 "plugins": [
                     { "transform": "ts-optchain/transform" },
                 ]
+                //...
             },
         }
 
