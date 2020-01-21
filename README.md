@@ -34,21 +34,16 @@ Additional actions:
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TodoContext>(opt =>
-                opt.UseInMemoryDatabase("TodoList"));
-            services.AddMvc();
-
-            // Register the Swagger services
+            ..
             services.AddSwaggerDocument();
         }
         public void Configure(IApplicationBuilder app)
         {
-            app.UseStaticFiles();
-
-            // Register the Swagger generator and the Swagger UI middlewares
+            ..
             app.UseOpenApi();
             app.UseSwaggerUi3();
-
+            .. 
+            
             app.UseMvc();
         }
 
