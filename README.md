@@ -18,7 +18,6 @@ Additional actions:
         
         Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 
-        npm i ts-optchain
         npm i axios
         npm i react-table @types/react-table
 
@@ -59,24 +58,10 @@ Additional actions:
         services.AddControllers()
             .AddNewtonsoftJson();
 
-[ts-optchain][2]:
-
-        // tsconfig.json
-        {
-            "compilerOptions": {
-                //...
-                "plugins": [
-                    { "transform": "ts-optchain/transform" },
-                ]
-                //...
-            },
-        }
-
 Bootstrap themes
 - Themes - https://bootswatch.com/
 - Theme builder - https://bootstrap.build/
 
 [1]: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.0&tabs=visual-studio
-[2]: https://github.com/rimeto/ts-optchain
 [3]: https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-3.0&tabs=visual-studio#jsonnet-support
 [AntD]: https://ant.design/docs/react/recommendation
