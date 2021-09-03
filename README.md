@@ -22,6 +22,8 @@ Additional actions:
         npm i axios
         npm i react-table @types/react-table
 
+        npm i antd
+
         NavMenu.tsx: <Container> => <Container fluid>
         Layout.js: <Container> => <Container fluid>
         
@@ -29,6 +31,11 @@ Additional actions:
         npm i react-leaflet @types/react-leaflet
         npm i victory @types/victory
         npm i @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
+        
+[AntD][Antd]:
+
+      //App.cs:      
+      @import '~antd/dist/antd.css';
 
 [NSwag][1]:
 
@@ -72,3 +79,4 @@ Bootstrap themes
 [1]: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.0&tabs=visual-studio
 [2]: https://github.com/rimeto/ts-optchain
 [3]: https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-3.0&tabs=visual-studio#jsonnet-support
+[AntD]: https://ant.design/docs/react/recommendation
